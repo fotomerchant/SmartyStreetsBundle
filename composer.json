@@ -1,0 +1,32 @@
+{
+  "name": "blackknight467/smarty-streets-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony 2 Bundle for SmartyStreet's API",
+  "keywords": [
+    "smartystreets",
+    "smarty",
+    "streets",
+    "bundle",
+    "address",
+    "validation",
+    "lookup"
+  ],
+  "homepage": "http://github.com/blackknight467/SmartyStreetsBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Derick Felsman",
+      "email": "derickfelsman@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "require-dev": {
+    "symfony/framework-bundle": ">=2.3"
+  },
+  "autoload": {
+    "psr-4": {"blackknight467\\SmartyStreetsBundle\\": ""}
+  },
+  "minimum-stability": "dev"
+}
