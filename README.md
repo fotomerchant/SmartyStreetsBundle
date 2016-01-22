@@ -46,7 +46,35 @@ smarty_streets:
 Usage
 =====
 
+You an use this bundle in two ways.  The first is to use the interfaces provided to map to your existing entities.  
+The second is to simply pass text strings to the functions that use them.   
 
+### Using Text Strings
+
+In your controller:
+```
+  $this->get('blackknight467.smarty_streets')->verifyUSStreetAddressText('1600 Pennsylvania Ave NW, Washington, DC 20500');
+```
+
+### Using Interfaces
+In your entity:
+```
+class SampleAddressEntity implements SimpleSmartyStreetsUSAddressInterface
+```
+
+In your controller:
+```
+  $address = new SampleAddressEntity();
+  $this->get('blackknight467.smarty_streets')->verifyUSStreetAddress($address);
+```
+
+Commands
+========
+This bundle comes with some symfony console commands so you can test text input:
+```
+php app/console smartystreets:us-verify {address}
+php app/console smartystreets:us-zip-verify {zipcode}
+```
 
 License
 =======
