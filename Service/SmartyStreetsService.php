@@ -174,6 +174,7 @@ class SmartyStreetsService
             $objs[] = $this->addInputIdJson($jsonObj, $zipCode);
         }
 
+        return $this->httpPost($url, json_encode($objs));
     }
 
     public function verifyInternationalAddress()
