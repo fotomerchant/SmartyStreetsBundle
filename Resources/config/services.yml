@@ -1,7 +1,5 @@
-parameters:
-    blackknight467.service.smartystreets: blackknight467\SmartyStreetsBundle\Service\SmartyStreetsService
-
 services:
-    blackknight467.smarty_streets:
-        class: %blackknight467.service.smartystreets%
-        arguments: [%blackknight467_smartystreets.auth_id%, %blackknight467_smartystreets.auth_token%]
+    blackknight467.smarty_streets: '@blackknight467\SmartyStreetsBundle\Service\SmartyStreetsService'
+
+    blackknight467\SmartyStreetsBundle\Service\SmartyStreetsService:
+        arguments: ['%blackknight467_smartystreets.auth_id%', '%blackknight467_smartystreets.auth_token%']
